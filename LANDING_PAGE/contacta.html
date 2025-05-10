@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleContacta.css">
+    <link rel="shortcut icon" href="img/icon.png"  type="image/x-icon">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Landing Page</title>
+    <link rel="icon" href="img/corazon.png" type="image/x-icon" />
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+                <label for="ckbox" class="drawer">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+
+            <ul class="links" id="links">
+                <li><a href="Quiensoy.html" >Quien soy</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="misproyectos.html">Proyectos destacados</a></li>
+                <li><a href="contacta.html" id="selected">Contacta</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <h1>Contacta
+        </h1>
+        <form action="mailto:saramartinezfernandez12@gmail.com">
+            <div class="input-contenedor">
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name:"nombre" id="nombre">
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name:"apellidos" id="apellidos">
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" name:"email" id="email">
+            </div>
+
+            <div class="input-contenedor">
+                <legend>Asunto</legend>
+                <select name="asunto" id="asunto">
+                    <option value="Curiosidad por un trabajo">Curiosidad por un trabajo</option>
+                    <option value="Realizar un proyecto conjunto">Realizar un proyecto conjunto</option>
+                    <option value="Puesto de trabajo">Puesto de trabajo</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div class="input-contenedor">
+                <legend>Mensaje</legend>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje"></textarea>
+            </div>
+            <div class="boton">
+                <input type="submit" value="Enviar">
+                <input type="submit" value="Eliminar">
+            </div>
+
+    </form>
+        
+        
+
+    
+
+
+    </main>
+
+    <footer>
+
+        <p>Landing page Lenguaje de Marcas</p>
+    </footer>
+</body>
+</html>

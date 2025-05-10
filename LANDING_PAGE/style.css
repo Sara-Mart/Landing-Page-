@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yeseva+One&display=swap');
+
+
+/*Establecemos las variables principales de nuestra web*/
+:root{
+
+    --primary: #581845;
+    --secundary: hsl(319, 27%, 58%);
+
+}
+/*CSS que afectara a nuestra web*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+
+}
+
+/*MENU DE NUESTRA WEB*/
+
+
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary);
+    
+}
+
+nav ul{
+    display:flex;
+    
+    list-style: none;
+
+}
+
+nav ul li{
+    margin:0 15px;
+    text-decoration: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1em;
+    
+}
+nav ul li a:hover{
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #581845;
+    font-weight: 900;
+    
+}
+
+.drawer {
+    color: var(--primary);
+    float: left;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    padding: .2rem;
+    border-radius: .1rem;
+}
+
+#ckbox {
+    display: none;
+}
+#selected{
+    
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #581845;
+}
+
+
+
+body{
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6em;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+h2{
+    font-weight: 100;
+    font-size:2.5em ;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+
+}
+main p{
+
+    font-weight: 100;
+    font-size:2em ;
+    text-align: center;
+    color: var(--primary);
+
+}
+main a{
+    text-decoration: none;
+    
+    
+}
+button{
+    color: var(--secundary);
+    width: 150px;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin:0 auto;
+    margin-top: 80px;
+    background-color: var(--primary);
+      
+}
+
+button:hover{
+    color: var(--primary);
+    
+    background-color: var(--secundary);
+      
+}
+
+footer{
+
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    color: var(--secundary);
+
+}
+
+/*parte responsive*/
+
+@media(max-width:1020px) {
+    nav {
+        justify-content: flex-start;
+    }
+    .drawer {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background-color: var(--secundary);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: block;
+        flex-direction: column;
+        align-content: stretch;
+        z-index: 1;
+        
+    }
+    nav ul li {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+  
+    }
+
+    nav ul li a:hover{
+        border: none;
+    }
+    #selected{
+    padding: 10px;
+    border: none;
+    font-weight: 900;
+    }   
+    #ckbox:checked~.links {
+        left: 0px;
+    }
+
+    button{
+        margin-top: 40px;
+    }
+
+    footer {
+     text-align: center;
+    }
+}
+/*********Quien soy**************/
+
+.contenido{
+    display: flex;
+}
+
+.contenido p{
+    font-size: 1rem;
+    
+}
+
+.texto{
+    padding: 60px;
+}
+
+.contenido img{
+    border-radius: 100%;
+    border: 2px solid #581845;
+    height: 70vh;
+    filter: drop-shadow(4px 4px 2px #5818459d);
+    margin-right: 1rem;
+}
+
+
+/**************Mis proyectos***********************/
+
+.icono{
+    width: 40%;
+    align-items: center;
+    justify-items: center;
+}
+
+.principal{
+
+    display: flex;
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    justify-content: space-around;
+    
+    
+
+}
+
+.cuadro{
+    
+    background-color: #ffffff;
+    width: 300px;
+    padding: 35px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+
+}
+
+.cuadro p{
+    font-size: 1rem;
+}
+
+.cuadro a button{
+    margin-top:20%;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+/***************CONTACTA***********************/
+.input-contenedor{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #581845;
+
+}
+form{
+    background-color:#ffffff;
+    margin-top: 100px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    
+
+}
+
+
+legend{
+    font-weight: 600;
+    color: var(--primary);
+}
+label{
+    display: block;
+}
+
+input [type="text"], input [type="email"]{
+
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    padding: 10px;
+    border:none;
+    align-content: center;
+    
+
+}
+textarea{
+    width: 100%;
+}
+.boton input{
+    border: none;
+    width: 27%;
+    font-size: 20px;
+    color: var(--secundary);
+    background-color:var(--primary);
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: auto;
+}
+
+.boton :hover{
+    color:var(--primary);
+    background-color:var(--secundary);
+    transition: 1.5s;
+}
+
+/*************Diseño grafico*******************/
+.disenografico{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20PX;
+    padding: 20px;
+    
+}
+.disenografico p{
+     font-size: 1rem;
+}
+.disenografico img{
+    width: 10%;
+    display: block;
+    margin:0 auto;
+}
+
+.disenografico .ilustraciones{
+    display: flex;
+}
+
+.disenografico .ilustraciones img{
+    width: 15%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.disenografico .xd{
+    margin-top:20px;
+    
+}
+
+
+
+.Indesign {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.Indesign iframe {
+  flex: 0 1 calc(50% - 20px); /* 2 por fila, con espacio */
+  height: 450px;
+}
+
+@media(max-width:767px){
+
+    h1{
+       font-size: 2rem; 
+    }
+
+    .boton input{
+        font-size: 12px;
+    }
+
+    .Indesign iframe{
+        width: 200px;
+    }
+}

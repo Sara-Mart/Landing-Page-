@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yeseva+One&display=swap');
+
+
+/*Establecemos las variables principales de nuestra web*/
+:root{
+
+    --primary: #581845;
+    --secundary: hsl(319, 27%, 58%);
+
+}
+/*CSS que afectara a nuestra web*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+
+}
+
+/*MENU DE NUESTRA WEB*/
+
+
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary);
+    
+}
+
+nav ul{
+    display:flex;
+    
+    list-style: none;
+
+}
+
+nav ul li{
+    margin:0 15px;
+    text-decoration: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1em;
+    
+}
+nav ul li a:hover{
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #581845;
+    font-weight: 900;
+    
+}
+
+.drawer {
+    color: var(--primary);
+    float: left;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    padding: .2rem;
+    border-radius: .1rem;
+}
+
+#ckbox {
+    display: none;
+}
+#selected{
+    
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #581845;
+}
+
+
+
+body{
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6em;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+h2{
+    font-weight: 100;
+    font-size:2.5em ;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+
+}
+main p{
+
+    font-weight: 100;
+    font-size:2em ;
+    text-align: center;
+    color: var(--primary);
+
+}
+main a{
+    text-decoration: none;
+    
+    
+}
+button{
+    color: var(--secundary);
+    width: 150px;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin:0 auto;
+    margin-top: 80px;
+    background-color: var(--primary);
+      
+}
+
+button:hover{
+    color: var(--primary);
+    
+    background-color: var(--secundary);
+      
+}
+
+footer{
+
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    color: var(--secundary);
+    margin-top: 20px;
+
+}
+
+/*contenido*/
+.cv{
+    width: 70%;
+    margin: 0 auto;
+}
+.cv .parte1{
+    display: flex;
+}
+.cv .parte1 img{
+    border-radius: 100%;
+    border: 2px solid #581845;
+    height: 70vh;
+    filter: drop-shadow(4px 4px 2px #5818459d);
+    margin-right: 1rem;
+    margin-top: 5%;
+}
+.cv .parte1 p{
+    font-size: 1rem;
+}
+.cv .parte1 ul li{
+    color:var(--primary);
+    margin-left: 10%;
+}
+
+/*parte 2*/
+
+.cv .parte2{
+    display: flex;
+}
+
+.parte2 section{
+
+    background-color: var(--secundary);
+    color: #ffffff;
+    padding: 5%;
+    border-radius: 2%;
+    margin-right: 50px;
+    width: 30%;
+    margin-top: 30px;
+}
+.parte2 section h2{
+    font-size: 1.5rem;
+}
+.parte2 section p{
+    font-size: 0.8rem;
+}
+.parte2 section ul li{
+    margin-left: 20px;
+}
+
+.parte2 .Historialab h4{
+    margin-top: 20px;
+    color: var(--primary);
+}
+.parte2 .Historialab p{
+    font-size: 1rem;
+}
+
+.parte2 .Historialab ul li{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+@media(max-width:1020px) {
+nav {
+        justify-content: flex-start;
+    }
+    .drawer {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background-color: var(--secundary);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: block;
+        flex-direction: column;
+        align-content: stretch;
+        
+    }
+    nav ul li {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+  
+    }
+
+    nav ul li a:hover{
+        border: none;
+    }
+    #selected{
+    padding: 10px;
+    border: none;
+    font-weight: 900;
+    }   
+    #ckbox:checked~.links {
+        left: 0px;
+    }
+
+    button{
+        margin-top: 40px;
+    }
+
+    footer {
+     text-align: center;
+    }
+.cv .parte1{
+    display: block;
+}
+img{
+    display: none;
+}
+
+.cv .parte2{
+    display: block;
+}
+.cv .parte2 section{
+    width: 100%;
+}
+
+
+
+
+}

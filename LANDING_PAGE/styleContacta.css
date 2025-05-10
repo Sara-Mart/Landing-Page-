@@ -1,0 +1,12 @@
+footer{
+    position: relative;
+    margin-top: 20px;
+
+}
+@media(max-width:767px){
+
+    h1{
+       font-size: 2rem; 
+    }
+
+}

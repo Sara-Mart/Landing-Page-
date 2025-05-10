@@ -1,0 +1,17 @@
+@media(max-width:1020px) {
+.contenido{
+    display: block;
+    text-align: center;
+   
+}
+
+
+footer{
+    position: relative;
+    margin-top: 20px;
+}
+
+
+
+
+}
